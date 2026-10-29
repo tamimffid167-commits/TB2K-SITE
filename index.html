@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RRRX ESPORTS | Free Fire Tournament</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">🔥</span><div><b>RRRX ESPORTS</b><small>FREE FIRE TOURNAMENTS</small></div></div>
+  <button class="menu" onclick="document.querySelector('#tournaments').scrollIntoView({behavior:'smooth'})">টুর্নামেন্ট</button>
+</header>
+<section class="hero">
+  <div class="eyebrow">BANGLADESH • FREE FIRE COMMUNITY</div>
+  <h1>YOUR NEXT<br><span>BOOYAH!</span> STARTS HERE</h1>
+  <p>BR, CS, Lone Wolf এবং Survivors ম্যাচে যোগ দিন। নিজের স্কিল দেখান, টিম নিয়ে খেলুন!</p>
+  <a class="cta" href="#tournaments">টুর্নামেন্ট দেখুন ↓</a>
+  <div class="stats"><div><b id="count">4</b><small>GAME MODES</small></div><div><b>24/7</b><small>COMMUNITY</small></div><div><b>BD</b><small>SERVER</small></div></div>
+</section>
+<main>
+  <section id="tournaments">
+    <div class="section-head"><div><small class="eyebrow">PLAY • COMPETE • WIN</small><h2>টুর্নামেন্ট মোড</h2></div><span class="pill">৪টি মোড</span></div>
+    <div class="cards">
+      <article class="card"><div class="card-icon">🪂</div><span class="tag">BATTLE ROYALE</span><h3>BR Tournament</h3><p>Solo / Duo / Squad ম্যাচের জন্য।</p><button onclick="joinMode('BR')">Join / Register</button></article>
+      <article class="card"><div class="card-icon">⚔️</div><span class="tag">CLASH SQUAD</span><h3>CS Tournament</h3><p>Custom room-এ Clash Squad ম্যাচ।</p><button onclick="joinMode('CS')">Join / Register</button></article>
+      <article class="card"><div class="card-icon">🎯</div><span class="tag">1 VS 1</span><h3>Lone Wolf</h3><p>ওয়ান-ভি-ওয়ান চ্যালেঞ্জ।</p><button onclick="joinMode('Lone Wolf')">Join / Register</button></article>
+      <article class="card"><div class="card-icon">🏆</div><span class="tag">SURVIVORS</span><h3>Survivors</h3><p>নিজের সারভাইভাল স্কিল দেখান।</p><button onclick="joinMode('Survivors')">Join / Register</button></article>
+    </div>
+  </section>
+  <section class="how"><div><small class="eyebrow">HOW TO JOIN</small><h2>খেলার নিয়ম</h2></div><ol><li>আপনার পছন্দের ম্যাচ বেছে নিন</li><li>নিচের ফর্মে নাম ও Free Fire UID দিন</li><li>অ্যাডমিন রেজিস্ট্রেশন যাচাই করবেন</li><li>রুম ID ও Password অ্যাডমিন থেকে নিন</li></ol></section>
+  <section class="register" id="register"><div><small class="eyebrow">PLAYER ENTRY</small><h2>রেজিস্ট্রেশন ফর্ম</h2><p>এই ডেমো ফর্মটি আপনার ডিভাইসে তথ্য জমা দেয় না এবং সার্ভারে পাঠায় না।</p></div>
+    <form id="joinForm">
+      <label>ম্যাচ মোড<select id="mode" required><option value="BR">BR</option><option value="CS">CS</option><option value="Lone Wolf">Lone Wolf</option><option value="Survivors">Survivors</option></select></label>
+      <label>Player Name<input id="player" required maxlength="40" placeholder="আপনার নাম"></label>
+      <label>Free Fire UID<input id="uid" required inputmode="numeric" pattern="[0-9]{5,20}" placeholder="আপনার FF UID"></label>
+      <label>Team Name (ঐচ্ছিক)<input id="team" maxlength="40" placeholder="আপনার টিমের নাম"></label>
+      <button type="submit">রেজিস্ট্রেশন তথ্য তৈরি করুন</button>
+    </form>
+    <div id="result" class="result" hidden></div>
+  </section>
+</main>
+<footer><b>RRRX ESPORTS</b><p>Fan-made tournament website template • Not affiliated with Garena.</p><small>অ্যাডমিন প্যানেল, অনলাইন ডাটাবেস ও পেমেন্ট চালু করতে সার্ভার/PHP সেটআপ প্রয়োজন।</small></footer>
+<script src="app.js"></script>
+</body></html>
